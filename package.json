@@ -1,0 +1,7 @@
+{
+  "name": "lembayung-2359",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AU interaktif bergaya iPhone: Lembayung 23:59",
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>Lembayung 23:59</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stage">
+  <div class="phone" id="phone">
+    <div class="screen" id="screen">
+      <div class="wall"></div>
+
+      <!-- HOME -->
+      <div id="home">
+        <div class="wdg glass"><small id="w-d"></small><b id="w-t"></b><p id="w-m"></p></div>
+        <div class="grid" id="grid"></div>
+        <div class="dock glass" id="dock"></div>
+      </div>
+
+      <!-- APPS (dibuat lewat JS) -->
+      <div id="apps"></div>
+      <div class="sheet" id="sheet"></div>
+
+      <!-- LOCK SCREEN -->
+      <div class="lock" id="lock" data-act="unlock">
+        <div class="lk-top"><small id="lk-date"></small><b id="lk-time"></b></div>
+        <div class="lk-n" id="lk-n"></div>
+        <div class="lk-hint">Ketuk untuk membuka</div>
+      </div>
+
+      <div class="bn" id="bn"></div>
+
+      <!-- DYNAMIC ISLAND -->
+      <div class="island" id="island" data-s="idle" data-act="isl">
+        <div class="isl-c"><span class="dot"></span><span id="ic-t" class="ell"></span><span id="ic-tm"></span></div>
+        <div class="isl-f">
+          <small id="if-ch"></small>
+          <b id="if-m"></b>
+          <p id="if-h"></p>
+          <div class="bar"><i id="if-bar"></i></div>
+          <div class="btns"><button data-act="plus1">+1 jam</button><button data-act="jump" id="jumpBtn">Lompat ke waktu berikutnya ⏩</button></div>
+        </div>
+      </div>
+
+      <div class="status" id="status"><span id="st-time">06:30</span><span class="r"><span>5G</span><span class="bat"><i></i></span></span></div>
+      <div class="hb" id="hb" data-act="home"></div>
+
+      <!-- INTRO -->
+      <div class="ov" id="intro">
+        <form class="card glass" data-form="intro">
+          <h2>Lembayung 23:59</h2>
+          <p>Kota Lembayung punya satu rahasia: tiap malam, jam di semua ponsel berhenti satu menit. Kamu baru pindah ke sini, dan seseorang sudah mengirimimu pesan.</p>
+          <p class="sm">Cerita berjalan dalam waktu game (1 detik = 1 menit). Beberapa kejadian baru muncul setelah menunggu berjam-jam. Lihat Dynamic Island untuk misi.</p>
+          <input id="nameIn" placeholder="Nama kamu (default: Nara)" maxlength="16" autocomplete="off">
+          <button class="pri">Mulai</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="story.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
