@@ -1,7 +1,8 @@
 // Proxy ke Groq. API key HANYA ada di environment variable Vercel (tidak pernah ke browser).
 module.exports = async (req, res) => {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Gunakan POST' });
-  const key = process.env.GROQ_API_KEY;
+  // Key ditaruh di file server ini (bukan di frontend). Env var GROQ_API_KEY di Vercel, kalau ada, diprioritaskan.
+  const key = process.env.GROQ_API_KEY || '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';
   if (!key) return res.status(500).json({ error: 'GROQ_API_KEY belum diset di Vercel' });
 
   let body = req.body;
